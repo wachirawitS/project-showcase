@@ -56,7 +56,7 @@ I implemented end-to-end automation to ensure every commit is production-ready.
 ## 📊 System Architecture
 The system is designed with a "Cost-Aware" mindset, utilizing a VPC with public and private subnets to ensure security while keeping the architecture lean.
 
-![Low-Cost Infrastructure Architecture](./low-cost-infra.png)
+![Low-Cost Infrastructure Architecture](./low-cost-infras.png)
 
 ---
 
