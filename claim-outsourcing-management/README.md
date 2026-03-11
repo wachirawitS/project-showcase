@@ -1,5 +1,4 @@
 # 🛡️ Claim Outsourcing Management
-
 System Architecture & End-to-End Implementation
 
 ### 📌 Overview
@@ -12,3 +11,6 @@ The system is built with a focus on modularity, utilizing a modern TypeScript-ba
 - **Infrastructure**: AWS (VPC, EC2, S3, EBS) for reliable and secure hosting.
 - **Database**: Relational Postgresql with TypeORM for data integrity and efficient querying.
 - **CI/CD**: GitHub Actions for automated build and deployment pipelines.
+
+### Architecture Diagram
+![Low-Cost Infrastructure Architecture](./low-cost-infra.png)
