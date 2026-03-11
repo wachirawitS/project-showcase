@@ -10,7 +10,7 @@ Welcome to my project showcase repository. This space is dedicated to documentin
 
 ## 📂 Featured Projects
 
-### 1. Claim OS [Link](claim-os/README.md)
+### 1. Claim OS [Link](claim-outsourcing-management/README.md)
 - End-to-end Insurance Claim Management System (Personal Project).
 - Focus: Cost-aware Architecture & Cloud Automation.
 - Key Achievement: Architected a production-ready system on AWS with a strict focus on cost-efficiency.
