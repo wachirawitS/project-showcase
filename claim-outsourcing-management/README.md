@@ -29,6 +29,7 @@ I follow the ADR pattern to document significant architectural decisions. These 
 | **ADR 002: EC2-First Infrastructure** | ✅ Accepted | Prioritized cost-efficiency by hosting core services on EC2 while offloading stateful data to managed storage where necessary. |
 | **ADR 003: TypeORM for Data Persistence** | ✅ Accepted | Provides a robust abstraction over SQL while ensuring type safety across the stack. |
 | **ADR 004: Using Cloudflare as Entry Point instead of AWS ALB** | ✅ Accepted | Optimized for zero-cost SSL termination and unified routing for both modern and legacy services. |
+| **ADR 005: Infrastructure as Code via Terraform** | ✅ Accepted | Ensures predictable environment setup and simplifies resource management across AWS services. |
 
 ---
 
@@ -57,6 +58,13 @@ I implemented end-to-end automation to ensure every commit is production-ready.
 - **Backend**: NestJS (API), TypeScript, JWT Auth, TypeORM.
 - **Frontend**: Next.js, Tailwind CSS, React Hook Form, Shadcn UI.
 - **Infrastructure**: AWS (VPC, Security Groups, EC2), Nginx (Reverse Proxy), Docker.
+
+### 📂 Multi-Repo Structure (GitHub Organization)
+This project is split into specialized repositories to follow the principle of Separation
+- **monolithic-service**: Core backend logic (NestJS).
+- **dashboard-client**: Frontend Admin & User interface (Next.js).
+- **infra**: Infrastructure as Code (Terraform) managing VPC, EC2, Security Groups, and IAM Roles.
+- **pipeline**: Content Delivery (CD).
 
 ---
 
