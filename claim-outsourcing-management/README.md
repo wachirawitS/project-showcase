@@ -32,6 +32,13 @@ I follow the ADR pattern to document significant architectural decisions. These 
 
 ---
 
+## 📊 System Architecture
+The system is designed with a "Cost-Aware" mindset, utilizing a VPC with public and private subnets to ensure security while keeping the architecture lean.
+
+![Low-Cost Infrastructure Architecture](./low-cost-infras.png)
+
+---
+
 ## 🛠️ Implementation Deep Dive
 
 ### 🏢 Scaling with GitHub Organization
@@ -50,13 +57,6 @@ I implemented end-to-end automation to ensure every commit is production-ready.
 - **Backend**: NestJS (API), TypeScript, JWT Auth, TypeORM.
 - **Frontend**: Next.js, Tailwind CSS, React Hook Form, Shadcn UI.
 - **Infrastructure**: AWS (VPC, Security Groups, EC2), Nginx (Reverse Proxy), Docker.
-
----
-
-## 📊 System Architecture
-The system is designed with a "Cost-Aware" mindset, utilizing a VPC with public and private subnets to ensure security while keeping the architecture lean.
-
-![Low-Cost Infrastructure Architecture](./low-cost-infras.png)
 
 ---
 
