@@ -16,6 +16,7 @@ Managing insurance claims is a complex process involving multiple stakeholders, 
 - **Next.js (Frontend)**: Selected for its hybrid rendering (SSR/SSG), ensuring a fast, SEO-friendly experience for the dashboard and user-facing portals.
 - **AWS EC2 over RDS/ECS**: For a cost-aware project, I opted for high-performance EC2 instances to host both the app and database (using Docker), significantly reducing the monthly burn compared to managed services while maintaining full control.
 - **PostgreSQL & TypeORM**: Reliable data integrity for sensitive claim data, with an abstraction layer that allows for easier database migrations.
+- **Cloudflare**: Integrated as the primary entry point to achieve zero-cost SSL/TLS termination and edge security (WAF/DDoS protection). This strategy bypasses the need for an expensive AWS ALB while providing a unified routing layer for both modern and legacy services.
 
 ---
 
@@ -25,8 +26,9 @@ I follow the ADR pattern to document significant architectural decisions. These 
 | Decision | Status | Rationale |
 | :--- | :--- | :--- |
 | **ADR 001: Modular Monolith (NestJS)** | ✅ Accepted | Balances simplicity and scalability without the overhead of microservices. |
-| **ADR 002: EC2-First Infrastructure** | ✅ Accepted | Prioritized cost-efficiency and direct control over AWS managed services (RDS/ECS). |
+| **ADR 002: EC2-First Infrastructure** | ✅ Accepted | Prioritized cost-efficiency by hosting core services on EC2 while offloading stateful data to managed storage where necessary. |
 | **ADR 003: TypeORM for Data Persistence** | ✅ Accepted | Provides a robust abstraction over SQL while ensuring type safety across the stack. |
+| **ADR 004: Using Cloudflare as Entry Point instead of AWS ALB** | ✅ Accepted | Optimized for zero-cost SSL termination and unified routing for both modern and legacy services. |
 
 ---
 
