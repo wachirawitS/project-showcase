@@ -1,1 +1,1 @@
-# project-showcase
+# Project Showcase
