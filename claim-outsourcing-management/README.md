@@ -1,16 +1,62 @@
 # 🛡️ Claim Outsourcing Management
-System Architecture & End-to-End Implementation
+**Strategic System Design & Cost-Aware Engineering**
 
-### 📌 Overview
-Claim OS is a comprehensive insurance claim management system designed to handle the full lifecycle of a claim. This project serves as a primary showcase for Cost-Aware Cloud Architecture, demonstrating how to build a production-ready environment on AWS while maintaining strict budget control.
+Welcome to the documentation for **Claim OS**. This project isn't just a claims management system—it’s a deep dive into building an enterprise-grade environment on a strict budget, focusing on **"The Why"** behind every technical decision.
 
-### 🏗️ Architecture & Tech Stack
-The system is built with a focus on modularity, utilizing a modern TypeScript-based stack:
-- **Backend**: NestJS (Modular Architecture) for maintainable and scalable service logic.
-- **Frontend**: Next.js for a responsive and SEO-friendly user interface.
-- **Infrastructure**: AWS (VPC, EC2, S3, EBS) for reliable and secure hosting.
-- **Database**: Relational Postgresql with TypeORM for data integrity and efficient querying.
-- **CI/CD**: GitHub Actions for automated build and deployment pipelines.
+---
 
-### Architecture Diagram
+## 📖 The Story: Why This Project?
+Managing insurance claims is a complex process involving multiple stakeholders, high data integrity requirements, and scalable workflows. I built **Claim OS** to demonstrate how to architect a production-ready system that is:
+1.  **Maintainable**: Modular architecture that grows with the business.
+2.  **Cost-Effective**: High performance on AWS without the "enterprise price tag."
+3.  **Automated**: Continuous integration that eliminates manual errors.
+
+### 🎯 Strategic Decisions (The "Why")
+- **NestJS (API)**: Chosen for its modular architecture and built-in support for TypeScript, making the backend predictable and easy to scale.
+- **Next.js (Frontend)**: Selected for its hybrid rendering (SSR/SSG), ensuring a fast, SEO-friendly experience for the dashboard and user-facing portals.
+- **AWS EC2 over RDS/ECS**: For a cost-aware project, I opted for high-performance EC2 instances to host both the app and database (using Docker), significantly reducing the monthly burn compared to managed services while maintaining full control.
+- **PostgreSQL & TypeORM**: Reliable data integrity for sensitive claim data, with an abstraction layer that allows for easier database migrations.
+
+---
+
+## 🏛️ Architecture Decision Records (ADR)
+I follow the ADR pattern to document significant architectural decisions. These records ensure that the logic behind my choices is preserved for the long term.
+
+| Decision | Status | Rationale |
+| :--- | :--- | :--- |
+| **ADR 001: Modular Monolith (NestJS)** | ✅ Accepted | Balances simplicity and scalability without the overhead of microservices. |
+| **ADR 002: EC2-First Infrastructure** | ✅ Accepted | Prioritized cost-efficiency and direct control over AWS managed services (RDS/ECS). |
+| **ADR 003: TypeORM for Data Persistence** | ✅ Accepted | Provides a robust abstraction over SQL while ensuring type safety across the stack. |
+
+---
+
+## 🛠️ Implementation Deep Dive
+
+### 🏢 Scaling with GitHub Organization
+To mirror professional engineering environments, I moved the project into a dedicated **GitHub Organization**. 
+- **Isolation**: Separating frontend, backend, and infrastructure repositories.
+- **Shared Governance**: Centralized secrets, variables, and team permissions.
+- **Professional Workflow**: Enforced branch protection and PR reviews.
+
+### 🚀 DevOps: GitHub Actions Workflows
+I implemented end-to-end automation to ensure every commit is production-ready.
+- **CI Pipeline**: Automated unit tests, linting, and security audits (Snyk/SonarQube).
+- **CD Pipeline**: Automated deployment to AWS EC2 via SSH and Docker Compose, triggered only on successful merges to the `main` branch.
+- **Environment Management**: Separation of `staging` and `production` environments using GitHub Environments and protected secrets.
+
+### 💻 Technical Stack
+- **Backend**: NestJS (API), TypeScript, JWT Auth, TypeORM.
+- **Frontend**: Next.js, Tailwind CSS, React Hook Form, Shadcn UI.
+- **Infrastructure**: AWS (VPC, Security Groups, EC2), Nginx (Reverse Proxy), Docker.
+
+---
+
+## 📊 System Architecture
+The system is designed with a "Cost-Aware" mindset, utilizing a VPC with public and private subnets to ensure security while keeping the architecture lean.
+
 ![Low-Cost Infrastructure Architecture](./low-cost-infra.png)
+
+---
+
+## 💡 Key Learnings
+Building **Claim OS** reinforced the importance of balancing technical purity with business constraints (cost and time). By documented ADRs and automating the pipeline, I created a system that is as much about **Engineering Excellence** as it is about **Strategic Value**.
