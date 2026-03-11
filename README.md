@@ -1,4 +1,4 @@
-# 🚀 Project Showcase: Wachirawit (Tan)
+# 🚀 Portfolio: Wachirawit (Tan)
 
 Welcome to my project showcase repository. This space is dedicated to documenting my engineering journey, system designs, and Architecture Decision Records (ADRs). Rather than just showing code, this repository focuses on the "Why" behind the "How"—demonstrating strategic technical decisions across enterprise and personal projects.
 
