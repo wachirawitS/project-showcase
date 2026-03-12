@@ -17,10 +17,12 @@ Welcome to my project showcase repository. This space is dedicated to documentin
 - Highlights: Implemented EC2 Savings Plans to optimize monthly burn.
 
 ### 2. Line Web Chat Handons [Link](https://github.com/wachirawitS/webchat-hands-on)
+**Live Demo**: [link](https://webchat-hands-on-idgr.vercel.app/)
 - Omni-channel Messaging Integration using Line Messaging API and Next.js.
 - Focus: Event-Driven Integration & Serverless Scalability.
 - Key Achievement: Designed a seamless Event-Driven Webhook architecture to handle real-time messaging with 0$ idle infrastructure cost.
 - Highlights: - Implemented a Full-stack Serverless approach on Vercel, ensuring the system scales instantly with incoming chat traffic.
+
 
 ## 💡 Engineering Philosophy
 I believe in building software that is:
