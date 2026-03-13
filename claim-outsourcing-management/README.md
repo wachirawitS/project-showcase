@@ -45,8 +45,7 @@ The system is designed with a "Cost-Aware" mindset, utilizing a VPC with public 
 ### 🏢 Scaling with GitHub Organization
 To mirror professional engineering environments, I moved the project into a dedicated **GitHub Organization**. 
 - **Isolation**: Separating frontend, backend, and infrastructure repositories.
-- **Shared Governance**: Centralized secrets, variables, and team permissions.
-- **Professional Workflow**: Enforced branch protection and PR reviews.
+- **Shared Governance**: Centralized secrets and variables.
 
 ### 🚀 DevOps: GitHub Actions Workflows
 I implemented end-to-end automation to ensure every commit is production-ready.
